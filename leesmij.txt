@@ -1,0 +1,28 @@
+# PureEnergieMeter
+Uitlezen van de Pure Energie Meter.
+Is een probeerseltje.
+Geeft de informatie van de Pure Energie Meter.
+http://smartbridge-3636/info
+Geeft de volgende json:
+{"id":"84df:0c00:0010:3636","mf":"NET2GRID","model":"SBWF3102","fw":"1.6.16","hw":1,"batch":"SBP-HMX-210318"}
+http://smartbridge-3636/meter/now
+Geeft de volgende json:
+{"status":"ok",
+"elec":{"power":{"now":{"value":109,
+"unit":"W",
+"time":1667304566},
+"min":{"value":17,
+"unit":"W",
+"time":1667277221},
+"max":{"value":6409,
+"unit":"W",
+"time":1667150375}},
+"import":{"now":{"value":18342461,
+"unit":"Wh",
+"time":1667304566}},
+"export":{"now":{"value":1,
+"unit":"Wh",
+"time":1667304566}}},
+"gas":{}}
+
+Alleen elektrisch omgezet naar een waarde. Gas heb ik niet meer.
