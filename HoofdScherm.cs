@@ -8,12 +8,21 @@ using System.Windows.Forms;
 
 namespace PureEnergieMeter {
   public partial class HoofdScherm : Form {
+    HuubsWerk huubsWerk;
     public HoofdScherm() {
       InitializeComponent();
     }
 
-    private void button1_Click(object sender, EventArgs e) {
-      HuubsWerk huubsWerk = new HuubsWerk(this);
+    private void buttonOpvragenGegevens_Click(object sender, EventArgs e) {
+      huubsWerk = new HuubsWerk(this, false);
+    }
+    private void buttonContinu_Click(object sender, EventArgs e) {
+      huubsWerk = new HuubsWerk(this, true);
+    }
+
+    private void buttonStop_Click(object sender, EventArgs e) {
+      huubsWerk = new HuubsWerk(this);
+      huubsWerk.Stop(sender, e);
     }
   }
 }
